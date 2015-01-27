@@ -49,7 +49,7 @@ do
 	if(!File.exist?("/var/log/auth.log","r"))
 	do
 		file = File.open("/var/log/auth.log","r")
-		fileold = File.open("/var/log/auth.olg" + Time.now.split(" ")[1] + ".log" + Time.now,"w+")
+		fileold = File.open("/var/log/auth.old" + Time.now.split(" ")[1] + ".log" + Time.now,"w+")
 		tabLogAtt = Array.new
 		file.each_line do |line|
 			fileold.write(line)
